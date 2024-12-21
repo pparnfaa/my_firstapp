@@ -28,19 +28,64 @@ class MyApp extends StatelessWidget {
             backgroundColor: Colors.purple,
           ),
           body: Container(
-            height: 100,
-            width: 100,
-            color: Colors.orange,
-            padding: const EdgeInsets.all(20),
-            margin: const EdgeInsets.all(20),
-            child: const Text('Hello'),
+            color: Colors.grey,
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              mainAxisSize: MainAxisSize.max,
+              children :[Container(
+                height: 150,
+                width: 100,
+                color: Colors.red,
+                padding: const EdgeInsets.all(20),
+                margin: const EdgeInsets.all(20),
+                child: const Text(
+                  "Item 1",
+                  style: TextStyle(color: Colors.white),
+                ),
+              ),
+              Container(
+                height: 100,
+                width: 100,
+                color: const Color.fromARGB(255, 239, 118, 252),
+                padding: const EdgeInsets.all(20),
+                margin: const EdgeInsets.all(20),
+                child: const Text(
+                  "Item 2",
+                  style: TextStyle(color: Colors.white),
+                ),
+              ),
+              Container(
+                height: 100,
+                width: 100,
+                color: const Color.fromARGB(255, 118, 129, 252),
+                padding: const EdgeInsets.all(20),
+                margin: const EdgeInsets.all(20),
+                child: const Text(
+                  "Item 3",
+                  style: TextStyle(color: Colors.white),
+                ),
+              
+              ),]
+            
           ),
+          
+          ),
+              // Container(
+              //   height: 100,
+              //   width: 100,
+              //   color: Colors.orange,
+              //   padding: const EdgeInsets.all(20),
+              //   margin: const EdgeInsets.all(20),
+              //   child: const Text('Hello'),
           floatingActionButton: FloatingActionButton(
             onPressed: () {
               print("Hello");
             },
             child: const Icon(Icons.phone),
           ),
+            
+          
         ));
   }
 }
