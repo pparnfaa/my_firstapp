@@ -20,72 +20,28 @@ class MyApp extends StatelessWidget {
         ),
         home: Scaffold(
           appBar: AppBar(
-            title: Text(
-              'Flutter Demo',
-              style: TextStyle(color: Colors.white),
-            ),
+            title:
+                const Text('Flutter Demo', 
+                style: TextStyle(color: Color.fromARGB(255, 62, 51, 52))),
             leading: const Icon(Icons.add),
-            backgroundColor: Colors.purple,
+            backgroundColor: const Color.fromARGB(255, 249, 213, 232),
           ),
-          body: Container(
-            color: Colors.grey,
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
-              crossAxisAlignment: CrossAxisAlignment.start,
-              mainAxisSize: MainAxisSize.max,
-              children :[Container(
-                height: 150,
-                width: 100,
-                color: Colors.red,
-                padding: const EdgeInsets.all(20),
-                margin: const EdgeInsets.all(20),
-                child: const Text(
-                  "Item 1",
-                  style: TextStyle(color: Colors.white),
-                ),
-              ),
-              Container(
-                height: 100,
-                width: 100,
-                color: const Color.fromARGB(255, 239, 118, 252),
-                padding: const EdgeInsets.all(20),
-                margin: const EdgeInsets.all(20),
-                child: const Text(
-                  "Item 2",
-                  style: TextStyle(color: Colors.white),
-                ),
-              ),
-              Container(
-                height: 100,
-                width: 100,
-                color: const Color.fromARGB(255, 118, 129, 252),
-                padding: const EdgeInsets.all(20),
-                margin: const EdgeInsets.all(20),
-                child: const Text(
-                  "Item 3",
-                  style: TextStyle(color: Colors.white),
-                ),
-              
-              ),]
-            
+          body: Center(
+            // child : Image.network('https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSaXYTlyWcEBs-yQ_ll_j43p-ySqRizPFM0Q_nb1UNF-MZJEwFnXthK4HGv9fIuvUcNVKFZ2bzH1ESf-BPLBzE6B5IasTeJHxaf-lXkdw'),
+           child: Image.asset(
+            'assets/IMG_2477.jpg',
+            width: 300,
+           ),
+           // child: ElevatedButton(
+            //   onPressed: () {
+            //     print("Pressed");
+            //   },
+            //  child: Text("Press Me")
+            //  ),
           ),
-          
-          ),
-              // Container(
-              //   height: 100,
-              //   width: 100,
-              //   color: Colors.orange,
-              //   padding: const EdgeInsets.all(20),
-              //   margin: const EdgeInsets.all(20),
-              //   child: const Text('Hello'),
-          floatingActionButton: FloatingActionButton(
-            onPressed: () {
+          floatingActionButton : FloatingActionButton(onPressed: (){
               print("Hello");
-            },
-            child: const Icon(Icons.phone),
-          ),
-            
-          
+             })
         ));
   }
 }
