@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(const Answer2());
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+class Answer2 extends StatelessWidget {
+  const Answer2({super.key});
 
   // This widget is the root of your application.
   @override
@@ -19,6 +19,18 @@ class MyApp extends StatelessWidget {
         ),
         home: Scaffold(
             appBar: AppBar(
+              leading: ElevatedButton(
+                onPressed: () {
+                  Navigator.pop(context);
+                },
+                child: Icon(Icons.arrow_back),
+                style: TextButton.styleFrom(
+                  backgroundColor: Colors.orange,
+                  shadowColor: Colors.transparent,
+                  padding: EdgeInsets.zero,
+                  iconColor: Colors.black,
+                ),
+              ),
               title: const Center(
                 child: Text(
                   'Socail Media Post',
