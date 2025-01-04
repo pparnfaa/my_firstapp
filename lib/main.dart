@@ -19,27 +19,21 @@ class MyApp extends StatelessWidget {
           useMaterial3: true,
         ),
         home: Scaffold(
-          appBar: AppBar(
-            title: const Text('Flutter Demo',
-                style: TextStyle(color: Color.fromARGB(255, 62, 51, 52))),
-            leading: const Icon(Icons.add),
-            backgroundColor: const Color.fromARGB(255, 249, 213, 232),
-          ),
-          body: ListView.separated(
-            itemCount: 50,
-            itemBuilder: (context, index) {
-              return ListTile(
-                leading: const Icon(Icons.add),
-                title: Text('Item $index'),
-                trailing: const Icon(Icons.person),
-              );
-            },
-            separatorBuilder: (context, index){
-              return const Divider(
-                thickness: 2,
-              );
-            },
-          ),
-        ));
+            appBar: AppBar(
+              title: const Text('Flutter Demo',
+                  style: TextStyle(color: Color.fromARGB(255, 62, 51, 52))),
+              leading: const Icon(Icons.add),
+              backgroundColor: const Color.fromARGB(255, 249, 213, 232),
+            ),
+            body: ListView(
+              padding: const EdgeInsets.all(10),
+              scrollDirection: Axis.horizontal,
+              shrinkWrap: true,
+              children: [
+                Container(width: 300, color: Colors.red),
+                Container(width: 300, color: Colors.green),
+                Container(width: 300, color: Colors.blue),
+              ],
+            )));
   }
 }
