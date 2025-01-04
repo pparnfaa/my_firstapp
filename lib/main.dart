@@ -20,22 +20,26 @@ class MyApp extends StatelessWidget {
         ),
         home: Scaffold(
           appBar: AppBar(
-            title:
-                const Text('Flutter Demo', 
+            title: const Text('Flutter Demo',
                 style: TextStyle(color: Color.fromARGB(255, 62, 51, 52))),
             leading: const Icon(Icons.add),
             backgroundColor: const Color.fromARGB(255, 249, 213, 232),
           ),
-          body: ListView.builder(
+          body: ListView.separated(
             itemCount: 50,
-            itemBuilder: (context, index){
+            itemBuilder: (context, index) {
               return ListTile(
                 leading: const Icon(Icons.add),
                 title: Text('Item $index'),
                 trailing: const Icon(Icons.person),
               );
             },
-        ),
+            separatorBuilder: (context, index){
+              return const Divider(
+                thickness: 2,
+              );
+            },
+          ),
         ));
   }
 }
