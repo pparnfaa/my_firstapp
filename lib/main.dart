@@ -18,22 +18,24 @@ class MyApp extends StatelessWidget {
           colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
           useMaterial3: true,
         ),
-        home: Scaffold(
-            appBar: AppBar(
-              title: const Text('Flutter Demo',
-                  style: TextStyle(color: Color.fromARGB(255, 62, 51, 52))),
-              leading: const Icon(Icons.add),
-              backgroundColor: const Color.fromARGB(255, 249, 213, 232),
-            ),
-            body: ListView(
-              padding: const EdgeInsets.all(10),
-              scrollDirection: Axis.horizontal,
-              shrinkWrap: true,
-              children: [
-                Container(width: 300, color: Colors.red),
-                Container(width: 300, color: Colors.green),
-                Container(width: 300, color: Colors.blue),
-              ],
-            )));
+        home: const GreetingWidget(name: 'Parnfa',));
+  }
+}
+
+class GreetingWidget extends StatelessWidget {
+  final String name; 
+  const GreetingWidget({super.key, required this.name});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+        appBar: AppBar(
+          title: const Text('Demo App'),
+        ),
+         body: Center( 
+            child: Text( 
+      'Hello, $name', 
+        style: const TextStyle(fontSize: 20),
+        )));
   }
 }
