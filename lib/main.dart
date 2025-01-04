@@ -26,22 +26,25 @@ class MyApp extends StatelessWidget {
             leading: const Icon(Icons.add),
             backgroundColor: const Color.fromARGB(255, 249, 213, 232),
           ),
-          body: Center(
-            // child : Image.network('https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSaXYTlyWcEBs-yQ_ll_j43p-ySqRizPFM0Q_nb1UNF-MZJEwFnXthK4HGv9fIuvUcNVKFZ2bzH1ESf-BPLBzE6B5IasTeJHxaf-lXkdw'),
-           child: Image.asset(
-            'assets/cat.png',
-            width: 300,
-           ),
-           // child: ElevatedButton(
-            //   onPressed: () {
-            //     print("Pressed");
-            //   },
-            //  child: Text("Press Me")
-            //  ),
-          ),
-          floatingActionButton : FloatingActionButton(onPressed: (){
-              print("Hello");
-             })
+          body: ListView(
+          children: [
+            Container(
+              height: 300,
+              width: double.infinity,
+              color: Colors.red,
+            ),
+            Container(
+              height: 300,
+              width: double.infinity,
+              color: Colors.blue,
+            ),
+            Container(
+              height: 300,
+              width: double.infinity,
+              color: Colors.green,
+            ),
+          ],
+        ),
         ));
   }
 }
