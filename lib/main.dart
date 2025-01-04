@@ -26,24 +26,15 @@ class MyApp extends StatelessWidget {
             leading: const Icon(Icons.add),
             backgroundColor: const Color.fromARGB(255, 249, 213, 232),
           ),
-          body: ListView(
-          children: [
-            Container(
-              height: 300,
-              width: double.infinity,
-              color: Colors.red,
-            ),
-            Container(
-              height: 300,
-              width: double.infinity,
-              color: Colors.blue,
-            ),
-            Container(
-              height: 300,
-              width: double.infinity,
-              color: Colors.green,
-            ),
-          ],
+          body: ListView.builder(
+            itemCount: 50,
+            itemBuilder: (context, index){
+              return ListTile(
+                leading: const Icon(Icons.add),
+                title: Text('Item $index'),
+                trailing: const Icon(Icons.person),
+              );
+            },
         ),
         ));
   }
